@@ -9,7 +9,7 @@ public class Tweet implements Serializable {
     private String nick;
     private String text;
     private String Date;
-    private int likes;
+    private String likes;
 
     public Tweet() {
     }
@@ -42,11 +42,11 @@ public class Tweet implements Serializable {
         Date = date;
     }
 
-    public int getLikes() {
+    public String getLikes() {
         return likes;
     }
 
-    public void setLikes(int likes) {
+    public void setLikes(String likes) {
         this.likes = likes;
     }
 

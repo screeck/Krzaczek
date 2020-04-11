@@ -18,12 +18,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context context;
     private List<Tweet> tweetList;
 
-
-    public RecyclerViewAdapter(Context context, List<Tweet> tweets) {
+    public RecyclerViewAdapter(Context context, List<Tweet> tweetList) {
 
         this.context = context;
-
-        tweetList = tweets;
+        this.tweetList = tweetList;
     }
 
     @NonNull
@@ -32,6 +30,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_row, parent, false);
+
+
 
 
 
@@ -45,6 +45,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.nick.setText(tweet.getNick());
         holder.text.setText(tweet.getText());
+        holder.date.setText(tweet.getDate());
+        holder.date.setText(tweet.getLikes());
 
 
     }
