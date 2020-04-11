@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Krzaczek</string>
+    <string name="tweetText">Tekst z Tweetera</string>
+    <string name="date">Data Tweeta</string>
+    <string name="likes">Ilość Lajków</string>
+    <string name="Nick">Nazwa na Tw</string>
+</resources>
