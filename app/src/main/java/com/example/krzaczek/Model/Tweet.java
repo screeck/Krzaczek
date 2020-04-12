@@ -11,7 +11,7 @@ public class Tweet implements Serializable {
     private String Date;
     private String likes;
 
-    public Tweet() {
+    public Tweet(String date, String text, String likes, String nick) {
     }
 
     public static long getId() {

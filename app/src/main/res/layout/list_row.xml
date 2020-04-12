@@ -14,13 +14,11 @@
             android:padding="15dp"
             android:layout_height="match_parent">
 
-            <TableRow
-                android:layout_below="@id/tweet_text"
-                android:layout_alignParentRight="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+
 
                 <TextView
+                    android:layout_below="@id/tweet_text"
+                    android:layout_alignRight="@id/tweet_date"
                     android:id="@+id/Like_counter"
                     android:layout_width="90dp"
                     android:text="@string/likes"
@@ -28,6 +26,8 @@
 
 
                 <ImageView
+                    android:layout_toLeftOf="@id/Like_counter"
+                    android:layout_below="@id/tweet_text"
                     android:id="@+id/Like_image"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
@@ -36,7 +36,7 @@
 
 
 
-            </TableRow>
+
 
 
 

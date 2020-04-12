@@ -1,6 +1,7 @@
 package com.example.krzaczek.Data;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +18,14 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private Context context;
     private List<Tweet> tweetList;
+    private static final String TAG = "MyActivity";
 
-    public RecyclerViewAdapter(Context context, List<Tweet> tweetList) {
+
+
+    public RecyclerViewAdapter(Context context, List Tweet ) {
 
         this.context = context;
-        this.tweetList = tweetList;
+        this.tweetList = Tweet;
     }
 
     @NonNull
@@ -35,7 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
 
-        return new ViewHolder(view, context);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -54,21 +58,24 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return tweetList.size();
+
+
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView nick;
-        TextView text;
-        TextView date;
-        TextView likes;
+        public TextView nick;
+        public TextView text;
+        public TextView date;
+        public TextView likes;
 
 
 
 
-        public ViewHolder(@NonNull View itemView, Context ctx) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            context = ctx;
+
 
 
             nick = (TextView) itemView.findViewById(R.id.Nick);
